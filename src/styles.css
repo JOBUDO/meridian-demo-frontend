@@ -1,0 +1,877 @@
+:root {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: #e9efec;
+  background: #101819;
+  font-synthesis: none;
+  font-weight: 400;
+  --accent: #b9ed87;
+  --muted: #92a39f;
+  --line: #2b3736;
+  --panel: #162021;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+  border: 1px solid var(--line);
+  background: #1c2929;
+  color: #d9e3df;
+  padding: 10px 15px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+button:hover {
+  border-color: #8cac87;
+  background: #263735;
+}
+button:disabled {
+  cursor: wait;
+  opacity: 0.48;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+header {
+  height: 90px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  padding: 0 4.3%;
+  gap: 30px;
+}
+.brand {
+  font-size: 27px;
+  letter-spacing: -1.1px;
+  font-weight: 650;
+  display: flex;
+  align-items: center;
+}
+.brand-icon {
+  border: 1px solid #9bbd87;
+  color: var(--accent);
+  width: 33px;
+  height: 33px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: 21px;
+  font-weight: 400;
+  border-radius: 50%;
+}
+.brand-dot {
+  color: var(--accent);
+}
+.demo {
+  font-size: 9px;
+  letter-spacing: 1.3px;
+  border: 1px solid #516c44;
+  border-radius: 4px;
+  color: #c3dbb5;
+  padding: 7px 9px;
+}
+.header-note {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 11px;
+}
+footer {
+  border-top: 1px solid var(--line);
+  padding: 24px 4.3%;
+  display: flex;
+  justify-content: space-between;
+  color: #81918c;
+  font-size: 10px;
+  gap: 20px;
+}
+.landing {
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: calc(100vh - 155px);
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 10%;
+  padding: 66px 5% 48px;
+  align-items: center;
+}
+.eyebrow {
+  color: #afc0b6;
+  font-size: 9px;
+  letter-spacing: 2px;
+  font-weight: 650;
+}
+h1,
+h2,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: clamp(32px, 3.8vw, 54px);
+  font-weight: 430;
+  letter-spacing: -2px;
+  line-height: 1.15;
+  margin: 22px 0;
+}
+h1 em {
+  font-style: normal;
+  color: var(--accent);
+}
+.intro > p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #9daea8;
+  max-width: 430px;
+}
+.orbit {
+  height: 240px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin: 12px 0;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, #b9ed8709, transparent 65%);
+}
+.orbit-line {
+  width: 300px;
+  height: 135px;
+  position: absolute;
+  border: 1px solid #91b57933;
+  border-radius: 50%;
+  transform: rotate(-24deg);
+}
+.orbit-line.second {
+  width: 300px;
+  height: 135px;
+  transform: rotate(24deg);
+  border-color: #91b57922;
+}
+.orbit-core {
+  font-size: 77px;
+  font-weight: 200;
+  color: #bdd4a7;
+  text-align: center;
+  letter-spacing: -9px;
+}
+.orbit-core span {
+  display: block;
+  letter-spacing: 2px;
+  font-size: 7px;
+  margin-top: 4px;
+  color: #9bae8f;
+}
+.orbit-label {
+  position: absolute;
+  left: 14%;
+  top: 64px;
+  background: #1c2925;
+  border: 1px solid #49623c;
+  padding: 8px 12px;
+  font-size: 8px;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  color: #b9d6a9;
+}
+.orbit-label.second {
+  left: auto;
+  right: 9%;
+  top: 147px;
+}
+.principles {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+  font-size: 9px;
+  color: #8eac79;
+}
+.principles b {
+  display: block;
+  font-size: 10px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #b3bfb9;
+  margin-top: 8px;
+}
+.login-card {
+  background: #182323;
+  border: 1px solid #34423b;
+  padding: 36px 34px 0;
+  border-radius: 12px;
+  box-shadow: 0 16px 70px #0002;
+}
+.login-card h2 {
+  font-size: 30px;
+  font-weight: 450;
+  letter-spacing: -1px;
+  line-height: 1.22;
+  margin: 20px 0 14px;
+}
+.login-card p {
+  color: #9caca4;
+  line-height: 1.7;
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+label {
+  display: block;
+  font-size: 11px;
+  color: #bbcac2;
+  margin-bottom: 18px;
+}
+input,
+select {
+  display: block;
+  width: 100%;
+  border: 1px solid #3c4c44;
+  border-radius: 6px;
+  background: #111c1b;
+  color: #e7eee8;
+  padding: 13px 12px;
+  margin-top: 9px;
+  outline: none;
+  font-size: 13px;
+}
+input:focus,
+select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px #b9ed8712;
+}
+.primary {
+  width: 100%;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #192716;
+  padding: 14px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.primary:hover {
+  background: #c9f49f;
+}
+.login-card > small {
+  display: block;
+  color: #899d92;
+  font-size: 10px;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+.login-foot {
+  border-top: 1px solid #34423b;
+  margin: 27px -34px 0;
+  padding: 18px 25px;
+  color: #94a78f;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.status-dot {
+  height: 5px;
+  width: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.terminal {
+  padding: 30px 3.5% 40px;
+  max-width: 1800px;
+  margin: auto;
+}
+.terminal-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 23px;
+  gap: 12px;
+}
+.terminal h1 {
+  font-size: 25px;
+  letter-spacing: -0.8px;
+  margin: 9px 0 0;
+}
+.live-tag {
+  font-size: 8px;
+  color: #b2cf9e;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-left: 14px;
+  padding: 5px 7px;
+  border: 1px solid #3e5137;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+.market-strip {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.market {
+  min-width: 270px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 13px;
+  background: #142020;
+  padding: 14px 18px;
+}
+.market.selected {
+  border-color: #7f9c62;
+  background: #202d26;
+}
+.market b {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 5px;
+}
+.market strong {
+  font-family: ui-monospace, monospace;
+  font-size: 14px;
+  font-weight: 500;
+}
+.market small {
+  font-family: inherit;
+  font-size: 9px;
+  color: #9daea2;
+  font-weight: 400;
+}
+.market > .positive,
+.market > .negative {
+  font-size: 10px;
+  margin-left: auto;
+  align-self: start;
+  margin-top: 4px;
+}
+.coin {
+  height: 34px;
+  width: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid #5d6e43;
+  background: #a6bb6820;
+  color: #d8dfb7;
+  font-size: 22px;
+}
+.trading-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(220px, 0.7fr) minmax(
+      255px,
+      0.8fr
+    );
+  gap: 16px;
+}
+.panel {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 9px;
+  overflow: hidden;
+  min-width: 0;
+}
+.panel-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding: 17px 18px;
+  gap: 10px;
+}
+.panel-title h2 {
+  font-size: 12px;
+  font-weight: 550;
+  letter-spacing: -0.1px;
+}
+.muted {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 400;
+}
+.pill {
+  font-size: 8px;
+  color: #a9b8af;
+  border: 1px solid #3a4940;
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+.price-head {
+  padding: 20px 22px 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.price-head strong {
+  font-size: 30px;
+  letter-spacing: -1px;
+  font-weight: 450;
+  font-family: ui-monospace, monospace;
+}
+.price-head > span {
+  font-size: 10px;
+  color: #aab9af;
+}
+.price-head small {
+  display: block;
+  margin-top: 4px;
+  font-size: 8px;
+  color: #799780;
+}
+.chart {
+  width: 100%;
+  height: auto;
+  min-height: 220px;
+  display: block;
+  padding: 14px 16px;
+}
+.chart-foot {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-top: 1px solid var(--line);
+  padding: 12px 18px;
+  font-size: 8px;
+  color: #9db09e;
+}
+.chart-foot span:last-child {
+  margin-left: auto;
+  color: #7d9186;
+}
+.positive {
+  color: #b9ed87;
+}
+.negative {
+  color: #ef9a99;
+}
+.book-head,
+.book-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: ui-monospace, monospace;
+  font-size: 10px;
+  padding: 8px 17px;
+  position: relative;
+}
+.book-head {
+  font-size: 8px;
+  color: #8da397;
+  padding: 13px 17px;
+}
+.book-row span {
+  z-index: 1;
+}
+.book-row span:nth-child(2) {
+  color: #c1ccc5;
+}
+.book-row i {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  top: 0;
+  background: currentColor;
+  opacity: 0.065;
+}
+.mid-price {
+  padding: 13px 17px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-family: ui-monospace, monospace;
+  font-size: 17px;
+  color: var(--accent);
+}
+.mid-price small {
+  color: #91a497;
+  font-size: 9px;
+}
+.ticket {
+  grid-column: 3;
+  grid-row: 1/3;
+}
+.ticket form {
+  padding: 0 20px 20px;
+}
+.segmented {
+  display: flex;
+  margin: 18px 20px 23px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.segmented button {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  color: #83988b;
+  padding: 11px;
+}
+.segmented .active.buy {
+  background: #b9ed8720;
+  color: var(--accent);
+}
+.segmented .active.sell {
+  background: #ef9a9920;
+  color: #ef9a99;
+}
+.ticket-info {
+  display: flex;
+  justify-content: space-between;
+  color: #92a698;
+  font-size: 9px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  gap: 12px;
+}
+.ticket-info b {
+  font-weight: 400;
+  color: #c7d2c7;
+}
+.ticket-description {
+  line-height: 1.7;
+  margin: 15px 0 22px;
+}
+.ticket-warning {
+  display: block;
+  text-align: center;
+  color: #8ba18f;
+  font-size: 9px;
+  line-height: 1.7;
+  margin-top: 17px;
+}
+.sell-button {
+  background: #ef9a99;
+  border-color: #ef9a99;
+  color: #311c1b;
+}
+.sell-button:hover {
+  background: #f5afad;
+}
+.table-scroll {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+th {
+  color: #8fa496;
+  font-size: 8px;
+  font-weight: 450;
+  padding: 13px 18px;
+}
+td {
+  padding: 12px 18px;
+  border-top: 1px solid #293831;
+  font-family: ui-monospace, monospace;
+}
+td b {
+  font-family: Inter, system-ui, sans-serif;
+  font-weight: 500;
+}
+.valuation {
+  padding: 20px 18px 5px;
+  font-size: 24px;
+  letter-spacing: -0.5px;
+}
+.valuation small {
+  color: #92a48f;
+  font-size: 10px;
+}
+.orders {
+  margin-top: 16px;
+}
+.orders td button {
+  font-family: system-ui;
+  font-size: 9px;
+  padding: 6px 10px;
+}
+.empty {
+  padding: 25px 18px;
+  text-align: center;
+  color: #9cae9f;
+  font-size: 11px;
+}
+.error {
+  padding: 13px 16px;
+  margin: 12px 0;
+  background: #ef9a9910;
+  color: #ffbdb4;
+  border: 1px solid #9b605e60;
+  border-radius: 6px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.notice {
+  padding: 13px 16px;
+  margin: 12px 0;
+  background: #b9ed8710;
+  color: #c5e9af;
+  border: 1px solid #5b754a;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.account {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+  font-size: 11px;
+  color: #a7bba9;
+}
+.account button {
+  font-size: 10px;
+}
+.admin {
+  margin-top: 16px;
+}
+.admin-actions {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.admin-actions p {
+  font-size: 11px;
+  color: #aebcae;
+}
+@media (min-width: 1500px) {
+  .chart {
+    min-height: 280px;
+  }
+}
+@media (max-width: 1100px) {
+  .trading-grid {
+    grid-template-columns: minmax(0, 1.4fr) minmax(250px, 1fr);
+  }
+  .ticket {
+    grid-column: 2;
+    grid-row: 2/4;
+  }
+  .book {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .trades {
+    grid-column: 1;
+  }
+  .balances {
+    grid-column: 1;
+  }
+  .landing {
+    gap: 6%;
+    padding-top: 40px;
+  }
+  .header-note {
+    display: none;
+  }
+  .intro h1 {
+    font-size: 39px;
+  }
+}
+@media (max-width: 760px) {
+  header {
+    height: 75px;
+    padding: 0 5%;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .brand {
+    font-size: 23px;
+  }
+  .brand-icon {
+    width: 27px;
+    height: 27px;
+    font-size: 17px;
+  }
+  .demo {
+    font-size: 7px;
+    letter-spacing: 0.5px;
+    padding: 6px;
+  }
+  .landing {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 38px 6%;
+  }
+  .intro h1 {
+    font-size: 40px;
+  }
+  .intro > p {
+    max-width: none;
+  }
+  .orbit {
+    height: 170px;
+    margin: 0;
+  }
+  .orbit-label {
+    left: 13%;
+    top: 30px;
+  }
+  .orbit-label.second {
+    right: 9%;
+    top: 110px;
+  }
+  .orbit-core {
+    font-size: 58px;
+  }
+  .orbit-line {
+    height: 105px;
+    width: 240px;
+  }
+  .orbit-line.second {
+    height: 105px;
+    width: 240px;
+  }
+  .principles {
+    gap: 12px;
+  }
+  .login-card {
+    padding: 28px 25px 0;
+  }
+  .login-card h2 {
+    font-size: 28px;
+  }
+  .login-foot {
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+  .terminal {
+    padding: 24px 4%;
+  }
+  .terminal-top {
+    align-items: flex-end;
+  }
+  .terminal h1 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  .terminal-top .eyebrow {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .terminal-top > button {
+    font-size: 9px;
+    padding: 9px;
+    flex-shrink: 0;
+  }
+  .live-tag {
+    display: none;
+  }
+  .market-strip {
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+  .market {
+    min-width: 230px;
+  }
+  .trading-grid {
+    grid-template-columns: 1fr;
+  }
+  .chart-panel,
+  .book,
+  .ticket,
+  .trades,
+  .balances {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .chart-panel {
+    order: 0;
+  }
+  .ticket {
+    order: 1;
+  }
+  .book {
+    order: 2;
+  }
+  .balances {
+    order: 3;
+  }
+  .trades {
+    order: 4;
+  }
+  .chart {
+    min-height: 200px;
+  }
+  .book-row {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+  .account {
+    gap: 6px;
+    font-size: 9px;
+  }
+  .account button {
+    padding: 6px;
+    font-size: 9px;
+  }
+  header:has(.account) {
+    height: auto;
+    min-height: 85px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .account {
+    width: 100%;
+    margin-left: 0;
+    justify-content: flex-end;
+  }
+  footer {
+    font-size: 8px;
+    line-height: 1.6;
+    align-items: flex-start;
+  }
+  .panel-title h2 {
+    font-size: 12px;
+  }
+  .price-head strong {
+    font-size: 26px;
+  }
+  .orders table {
+    min-width: 670px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
